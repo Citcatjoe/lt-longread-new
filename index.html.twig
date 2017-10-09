@@ -1,0 +1,929 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		{{ block('head_brand') }}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css" />
+
+		<script src="https://use.typekit.net/pve7eut.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<script>
+			document.documentElement.className = 'js';
+		</script>
+		
+	</head>
+
+	<body style="padding-top: {{ navBarOffset }};">
+		{{ block('bar_brand') }}
+		<div class="overlay">
+			<img class="logo-brand" src="img/logo-lt-blanc.svg" alt="">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div> 
+		
+		<!-- <div class="progress"></div> -->
+
+		<!-- <nav>
+			<ul>
+			</ul>
+		</nav> -->
+
+		<header>
+			<div class="header--bg">
+				<div class="header-gradient"></div>
+				<div class="header--bg--img"></div>
+			</div>
+			<div class="header--title">
+				<div class="container">
+					<h1 class="f-font1 f-weight400 f-h1 f-white-special">Au chevet des oliviers du Salento</h1>
+					<div class="spacer-xs"></div>
+					<h2 class="f-font1 f-h2 f-white-special f-aa">Les oliviers centenaires de la région du Salento, dans le sud de l’Italie, sont frappés par une mystérieuse épidémie qui laisse présager du pire pour l’avenir de ces symboles de paix et de longévité.</h2>
+				</div>
+			</div>
+			<div class="header--caption">
+				<div class="container f-font1 f-gray-medium f-aside f-aa">
+					Photographies: Eddy Mottaz
+				</div>
+			</div>
+		</header>
+
+		<section>
+			<div class="container">
+				<div class="row">
+
+					<div class="box-aside infos is-absolute col-md-4">
+						<p class="f-font1 f-aside f-gray-dark f-nomargin">
+							<span class="f-font1 f-weight600">Fabien Goubet</span> <span class="f-aa">, journaliste à la rubrique science pour <i>Le Temps</i></span>
+						</p>
+						<div class="spacer-sm"></div>
+						<a href="mailto:fabien.goubet@letemps.ch" target="_blank"><button type="button" class="btn btn-default btn-lg f-font3 f-weight600 f-aa">Ecrire à Fabien</button></a>
+						<div class="spacer-sm"></div>
+						<p class="f-font1 f-aside f-gray-medium f-aa f-nomargin">Publié le 17 avril 2015<br>7 minutes de lecture</p>
+						<div class="spacer-lg"></div>
+						<p class="f-font1 f-weight600 f-aside f-black f-nomargin">Partager cet article</p>
+						<div class="spacer-xs"></div>
+						<div class="sharebox">
+							<a href="https://www.facebook.com/sharer.php?u={{ app.url }}&display=popup&ref=plugin&src=share_button" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+							<a href="https://twitter.com/intent/tweet?text={{ twitterDescription ~ ' ' ~ app.url ~ ' '|url_encode }}&via={{ brand }}" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+							<a href="https://www.linkedin.com/shareArticle?url={{ app.url }}&mini=true&title={{ title|url_encode }}&summary={{ description|url_encode }}&source={{ 'Le Temps'|url_encode }}" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+						</div>
+					</div>
+
+					<div class="content col-md-12">
+						
+						<p>
+							Pour la communauté scientifique, la responsable se nomme <i>Xylella fastidiosa</i>, une bactérie qui infecte l’arbre et le fait « étouffer », provoquant son dessèchement jusqu’à sa mort. En réponse, les autorités italiennes prévoient d’abattre des dizaines de milliers d’arbres potentiellement infectés et de répandre herbicides et pesticides dans la région.
+						</p>
+						<p>
+							Cette issue, un nombre croissant d’habitants du Salento la refusent. Cultivateurs, agronomes ou simples citoyens, ils veulent sauvegarder l’emblème de leur région. <i>Le Temps</i> est allé à leur rencontre.
+						</p>
+						<p>
+							<b>IL RE, LE ROI.</b> C’est ainsi que les habitants du coin le nomment  Un arbre si large qu’il faut une bonne vingtaine de foulées pour en faire le tour. Vu de loin, on dirait un baobab, enraciné dans ce sol sec et poussiéreux couleur terre de Sienne. Il se dit par ici qu’il pourrait avoir plus de mille ans. Alors quand le tracé d’une nouvelle route l’a menacé d’abattage l’an dernier, une association s’est mobilisée pour le protéger. Et les ouvriers ont été priés de décaler leur tracé.
+						</p>
+						
+							<!-- PICTURE BIG -->
+							<!-- <div class="box-full col-md-12">
+								<div class="row">
+									<div class="spacer-sm"></div>
+									<figure class="figure-lg">
+										<img src="img/article/accueil-placeholder.jpg" alt="" class="img-responsive"/>
+											<div class="row">
+												<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">
+													<div class="spacer-xl"></div>
+													La Neuchâteloise Julie Beck est une nomade numérique 
+													qui travaille à distance pour les grandes marques 
+													horlogères
+												</figcaption>
+											</div>
+									</figure>
+									<div class="spacer-xl"></div>
+								</div>
+							</div> -->
+
+						<!-- PICTURE NORMAL -->
+						<!-- <div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/accueil-placeholder.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Ma belle légende en rapport avec ce slider d'oliviers ici.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div> -->
+
+						<!-- NEWSLETTER -->
+						<!-- <div class="box-corridor col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<div class="newsletter col-sm-10 col-sm-offset-1 ">
+									<h6 class="f-font1 f-h6 f-black f-aa">
+										Nos grands formats vous intéressent ?<br>Inscrivez-vous et n’en ratez plus aucun.
+									</h6>
+									<div class="spacer-xs"></div>
+									<div class="input-group form-button-fix">
+										<input type="text" class="form-control input-lg f-font1 f-aa" placeholder="Votre email">
+										<span class="input-group-btn">
+											<button class="btn btn-default btn-lg f-font3 f-weight600 f-aa" type="button">S'inscrire</button>
+										</span>
+									</div>
+								</div>
+								<div class="spacer-lg"></div>
+							</div>
+						</div> -->
+						
+						<!-- VIDEO SMALL -->
+						<!-- <div class="box-corridor col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="row">
+									<div class="spacer-md"></div>
+									<div class="video-wrapper col-xs-11 col-xs-offset-1">
+										<div class="video-wrapper-flex">
+											<iframe src="https://player.vimeo.com/video/193730609?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+										<div class="spacer-lg"></div>
+									</div>
+
+								</div>
+							</div>
+						</div> -->
+
+						
+						<div class="box-corridor col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<div class="slider owl-carousel owl-theme col-sm-12">
+									<img src="img/article/slider1.jpg" alt="">
+									<img src="img/article/slider2.jpg" alt="">
+									<img src="img/article/slider3.jpg" alt="">
+									<img src="img/article/slider4.jpg" alt="">
+									<img src="img/article/slider5.jpg" alt="">
+								</div> 
+								<!-- <div class="newsletter col-sm-10 col-sm-offset-1 ">
+									<h6 class="f-font1 f-h6 f-black f-aa">
+										Nos grands formats vous intéressent ?<br>Inscrivez-vous et n’en ratez plus aucun.
+									</h6>
+									<div class="spacer-xs"></div>
+									<div class="input-group form-button-fix">
+										<input type="text" class="form-control input-lg f-font1 f-aa" placeholder="Votre email">
+										<span class="input-group-btn">
+											<button class="btn btn-default btn-lg f-font3 f-weight600 f-aa" type="button">S'inscrire</button>
+										</span>
+									</div>
+								</div> -->
+								<div class="spacer-lg"></div>
+							</div>
+						</div>
+
+						<p>
+							C’est qu’on ne plaisante pas avec les oliviers du Salento, cette région des Pouilles qui constitue le talon de la botte italienne. Plus qu’une source de revenus, ces arbres vénérables sont intimement liés à l’identité de la région et de ses habitants. Hélas, une menace bien plus grave que n’importe quelle construction pèse en ce moment sur ces symboles de paix et de prospérité.
+						</p>
+						
+
+						<p class="f-h6 f-font1 f-inter">Un mal invisible</p>
+
+
+						<p>
+							Tout a commencé il y a quelques années, en 2013 officiellement, bien que certains assurent avoir eu des arbres malades à partir de 2007 ou 2008. Normalement épanouis dans un climat sec, les oliviers ont commencé à souffrir de dessèchement spontané ou “dessicamento spontaneo” dans la langue de Dante. Les scientifiques parlent du syndrome de dégénérescence précoce de l’olive. La responsable serait une bactérie, Xylella fastidiosa, que des chercheurs de l’université de Bari ont récemment identifiée dans des échantillons d’oliviers malades.
+						</p>
+
+						<!-- PICTURE BIG -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-lg">
+									<img src="img/article/map.jpg" alt="" class="img-responsive"/>
+										<div class="row">
+											<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">
+												<div class="spacer-xl"></div>
+												Le Salento (Salentu en dialecte) constitue l'extrémité sud-est de la région des Pouilles en Italie. Décrit comme étant le « talon de la botte italienne », il englobe la totalité de la province de Lecce.
+											</figcaption>
+										</div>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						
+
+						<p>
+							Lorsqu’elle contamine un arbre, Xylella s’installe dans le xylème, la partie du bois où circule la sève. Au fur et à mesure qu’elle prolifère, elle obstrue ses vaisseaux, empêchant l’eau et les minéraux de circuler. Résultat, l’arbre se flétrit puis finit par mourir comme par étouffement. La maladie se propage ensuite grâce à des insectes tels que la cicadelle, une sorte de sauterelle qui transmet la Xylella aux arbres dont elle suce la sève.
+						</p>
+
+						<p>
+							Si Xylella est bien la responsable de la maladie des oliviers, alors il y a de quoi s’inquiéter. Car ce microorganisme est connu des scientifiques, et pas en bien: elle ravage les vignes californiennes depuis la fin du XIXe siècle et a peu à peu contaminé tout le continent américain, provoquant à chaque fois d’irréversibles dégâts sur les citronniers, lauriers-roses, caféiers et autres cultures. La découverte de son arrivée sur le Vieux Continent ne laisse donc rien présager de bon.
+						</p>
+
+						<div class="box-corridor-half col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-lg"></div>
+								<div class="quote f-font1 f-quote f-weight100 f-aa col-xs-11 col-xs-offset-1">
+									L'arrivée de la Xylella sur le Vieux Continent ne présage rien de bon
+								</div>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<p>
+							Comment a-t-elle pu débarquer dans le Salento? D’après l’enquête menée par le parquet de Bari, deux hypothèses se dégagent. La première: Xylella serait arrivée cachée dans le tronc de certaines plantes ornementales importées d’Amérique centrale. La seconde: elle aurait légalement traversé l’Atlantique pour être étudiée lors d’un atelier scientifique de l’Institut agronomique méditerranéen à Bari en 2010.
+						</p>
+
+						<!-- PICTURE BIG -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-lg">
+									<img src="img/article/tooltip.jpg" alt="" class="img-responsive"/>
+										<div class="row">
+											<!-- <figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">
+												<div class="spacer-xl"></div>
+												Le Salento (Salentu en dialecte) constitue l'extrémité sud-est de la région des Pouilles en Italie. Décrit comme étant le « talon de la botte italienne », il englobe la totalité de la province de Lecce.
+											</figcaption> -->
+										</div>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<p>
+							Quoi qu’il en soit, la terrible bactérie est bien présente dans le Salento. Inconscientes de la gravité de la situation, ou préférant l’ignorer, les autorités régionales ont tardé à réagir. Dans ce climat confus propice aux informations contradictoires, l’Italie a finalement produit un plan de lutte dont la pierre angulaire est l’abattage de milliers d’oliviers infectés, ainsi que l’épandage massif de pesticides et d’herbicides pour limiter la propagation des insectes vecteurs.
+						</p>
+
+
+						<p>
+							Sur les quelque 50 millions d’oliviers qui pousseraient dans toutes les Pouilles, le gouvernement a d’abord prévu d’en couper un million, avant de ramener ce nombre <a href="http://www.quotidianodipuglia.it/regione/xylella_motta_iam_martina_lecce/notizie/1284165.shtml" target="_blank">à une fourchette plus réaliste</a>, de 10 000 à 35 000 arbres. <a href="http://www.quotidianodipuglia.it/regione/xylella_eradicazioni_ulivi/notizie/1293498.shtml" target="_blank">Les 7 premiers sont tombés le 13 avril</a>, malgré la résistance sur place de quelques activistes.
+						</p>
+
+						<div class="encart">
+							<div class="box-aside col-md-3">
+								<figure>
+									<img src="img/article/interview1.png">
+									<div class="spacer-lg"></div>
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa"><span class="f-weight700">Giuseppe Siletti</span>Commissaire extraordinaire en charge de la lutte contre l'épidémie</figcaption>
+								</figure>
+							</div>
+							<div class="encart-2-columns col-md-9">
+								<span class="f-font1 f-weight700">– Pourquoi est-il si important d’abattre les oliviers? N’y a-t-il aucun moyen de les soigner?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– Les abattages des oliviers, que nous limiterons tant que possible, sont le seul moyen de combattre l’épidémie. Associées à de bonnes pratiques agricoles destinées à garder un sol propre, elles permettent de détruire les réservoirs de <i>Xylella fastidiosa</i>.</span>
+
+								<div class="spacer-md"></div>
+								<span class="f-font1 f-weight700">– Combien d’arbres comptez-vous vraiment abattre?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– Pour l’instant il est impossible de le savoir, le nombre final ne sera connu qu’après les interventions. Mais il sera de toute façon bien moins élevé que le nombre d’arbres que nous abattons chaque année à la demande des propriétaires des provinces de Lecce et de Brindisi.</span>
+
+								<div class="spacer-md"></div>
+								
+								<span class="f-font1 f-weight700">– Comment choisissez-vous les arbres à abattre?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– La loi stipule que les arbres montrant des symptômes visibles de la maladie doivent être abattus. Des tests génétiques pour identifier la bactérie sont en outre effectués en laboratoire à partie d’échantillons provenant de ces arbres, mais aussi de tous ceux plantés dans un rayon de 200 mètres. ils sont effectués par les services phytosanitaires régionaux.</span>
+							</div>
+						</div>
+
+						<p class="f-h6 f-font1 f-inter">L'olivier, plus qu'un symbole</p>
+
+						<p>
+							«Ces arbres, c’est la plus belle chose jamais sortie de cette terre rouge. Et regardez où nous en sommes », lâche, accablé, Antonio Provenzano, en inspectant ses oliviers. De leur feuillage, il ne reste plus que quelques branches encore en vie. « J’essaie d’élaguer les branches malades, mais ce sont plus des soins palliatifs qu’autre chose, ajoute cet oléiculteur de 48 ans. De mémoire d’homme, on n’a jamais vu ça. »
+						</p>
+
+						<p>
+							La situation est encore plus critique chez son voisin, dont les oliviers n’ont plus la moindre feuille. Laissés tels quels, sans aucun entretien, leurs troncs hirsutes les font ressembler à des décors de film d’horreur. A voir un tel spectacle, on se croirait en plein hiver. Sauf que le soleil brille fort en cette journée d’avril et qu’à cette époque de l’année, ces oliviers sont censés afficher un feuillage dense, d’un joli vert argenté.
+						</p>
+
+						<p>
+							«Celui-là, je l’appelle le pied de mammouth», dit Antonio Provenzano en désignant un gros olivier qui rappelle effectivement la patte du pachyderme. Planté devant le chantier de sa maison, il semble accueillir les visiteurs. Antonio plonge les mains dans ses poches et retrace les événements. Pour lui, tout a commencé l’année dernière, dans son oliveraie d’une centaine d’arbres. En plein hiver, il constate que des branches sont desséchées, sans en comprendre la cause. Les oliviers de son voisin sont également concernés. Puis l’été arrive et avec lui les insectes vecteurs de la maladie. Le dessèchement s’intensifie. Vite, il élague les branches mortes. Mais la maladie progresse inexorablement.
+						</p>
+
+						<div class="box-corridor-half col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-lg"></div>
+								<div class="quote f-font1 f-quote f-weight100 f-aa col-xs-11 col-xs-offset-1">
+									Ces arbres, c’est la plus belle chose jamais sortie de cette terre rouge
+								</div>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<p>
+							Couper ses oliviers? Impensable pour lui qui tient cette passion de son père, lui-même oléiculteur. «Sans mes oliviers, tout ça n’en vaut plus la peine, lâche-t-il en montrant du menton le chantier de sa future maison jouxtant son oliveraie. Tant qu’il leur restera ne serait-ce qu’un seul rameau en vie, je les protégerai, même si je dois m’y enchaîner».
+						</p>
+
+						<p>
+							Au delà de ses projets personnels fortement remis en question, c’est tout le sort des Pouilles qui l’inquiète. Avec 40% de la production totale d’huile d’olive italienne, la région, déjà très pauvre, se retrouverait dans une situation économique catastrophique. Symboles de paix et de longévité, surnommés l’or vert des Pouilles, les oliviers sont aussi et surtout partie intégrante de l’identité de la région. Leur disparition serait vécue comme un traumatisme. «Vous ne pouvez pas vous rendre compte à quel point ce serait un drame pour toutes les Pouilles», résume l’oléiculteur.
+						</p>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/champ.jpg" alt="" class="col-md-8">
+									<!-- <figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Ma belle légende en rapport avec ce slider d'oliviers ici.</figcaption> -->
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<div class="encart">
+							<div class="box-aside col-md-3">
+								<figure>
+									<img src="img/article/interview2.jpg">
+									<div class="spacer-lg"></div>
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa"><span class="f-weight700">Domenico Bosco</span>Professeur d'entomologie agricole à l'Université de Turin</figcaption>
+								</figure>
+							</div>
+							<div class="encart-2-columns col-md-9">
+								<span class="f-font1 f-weight700">– Faut-il s’attendre à une progression de l’épidémie qui frappe les oliviers italiens?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– Malheureusement oui. Des prélèvements viennent de mettre en évidence un nouveau foyer dans la province de Brindisi, à environ 30 km au nord de la première zone infectée. A cela s’ajoute la découverte de nouvaux foyers de maladie au sein mêmme de cette zone initiale.</span>
+
+								<div class="spacer-md"></div>
+								<span class="f-font1 f-weight700">– La maladie est connue depuis plus d’un siècle. Pourquoi est-il si difficile de trouver un traitement?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– Parce que les outils dont on dispose ne sont pas adaptés. On ne peut pas faire grand chose contre des bactéries s’attaquant aux cultures. Les antibiotiques sont à proscrire, car utilisés à telle échelle, de nombreuses résistances apparaitraient certainement. Quant aux produits à base de cuivre, utilisés contre les champignons, ils limitent au mieux la progression des bactéries, mais ne les éradiquent pas.</span>
+
+								<div class="spacer-md"></div>
+								
+								<span class="f-font1 f-weight700">– Que peut-on faire?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– La seule option restante, c’est de faire de la prévention. Xylella étant transmise par des insectes, on peut essayer de les contrôler, par exemple en arrachant les herbes abritant leurs larves, ou en utilisant des pesticides pour tuer les adultes.</span>
+
+								<div class="spacer-md"></div>
+								
+								<span class="f-font1 f-weight700">– L’abattage des oliviers est-il inéluctable?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– Je crains que l’élagage ne suffise pas et qu’il faille non seulement arracher les oliviers malades, mais aussi les autres arbres concernés par la maladie, tels que les amandiers, les cerisiers, certains lauriers-roses… Si nous ne le faisons pas, les insectes continueront à propager la Xylella et l’épidémie sera hors de contrôle.</span>
+
+								<div class="spacer-md"></div>
+								
+								<span class="f-font1 f-weight700">– Les pesticides ont-ils un intérêt dans ce cas précis?</span>
+								<div class="spacer-sm"></div>
+								<span class="f-font2">– Je suis d’accord, ce n’est pas la solution la plus populaire. Mais les insecticides ont déjà prouvé leur efficacité sur des maladies associées à la Xylella en Amérique. Et l’olivier étant pollénisé par le vent, le risque d’empoisonner des insectes pollinisateurs est somme toute assez faible si les produits sont correctement appliqués.</span>
+							</div>
+						</div>
+						
+						<p class="f-h6 f-font1 f-inter">A l'écoute des arbres malades</p>
+
+						<p>
+							Une telle hécatombe signerait en outre la fin d’un mode de culture traditionnel très ancré dans le Salento. C’est du moins ce que redoute Tina Minerva, militante au sein de l’association d’agriculteurs bio Spazi Popolari. Emmitoufflée dans sa doudoune noire malgré les vingt degrés, elle villipende la mauvaise gestion de l’épidémie, avec de vifs gestes des mains. «C’est à se demander si il n’y a pas une volonté de tuer ces oliviers», s’emporte-t-elle en rappelant que la disparition de nombreux petits oléiculteurs ne ferait pas que des malheureux.
+						</p>
+
+						<div class="box-corridor-half col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-lg"></div>
+								<div class="quote f-font1 f-quote f-weight100 f-aa col-xs-11 col-xs-offset-1">
+									C’est à se demander si il n’y a pas une volonté de tuer ces oliviers
+								</div>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<div class="box-aside col-md-4" style="color:red; display: inline; overflow: auto;">
+							<figure>
+								<img src="img/article/slider10.jpg">
+								<div class="spacer-xl"></div>
+								<figcaption class="f-font1 f-aside f-gray-medium f-aa">En plein foyer de l'épidémie, au milieu des oliviers desséchés, Tina Minerva et son association parviennent à guérir des arbres grâce à des méthodes respectueuses de l'environnement</figcaption>
+							</figure>
+						</div>
+
+						<p>
+							Elle cite notamment la Coldiretti, la plus grande confédération italienne des agriculteurs, partisane selon elle d’une agriculture industrialisée, ou encore les firmes agrochimiques, pour qui ce nouveau fléau constitue avant tout un nouveau marché. Alors l’abattage et les produits chimiques, Tina ne veut pas en entendre parler. Elle est persuadée qu’il est possible de faire reculer l’épidémie avec des méthodes respectueuses de l’environnement, et tient à nous le prouver.
+						</p>
+
+						<!-- <div class="box-corridor col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<div class="slider owl-carousel owl-theme col-sm-12">
+									<img src="img/article/slider10.jpg" alt="">
+									<img src="img/article/slider11.jpg" alt="">
+									<img src="img/article/slider12.jpg" alt="">
+									<img src="img/article/slider13.jpg" alt="">
+									<img src="img/article/slider14.jpg" alt="">
+								</div> 
+								
+								<div class="spacer-lg"></div>
+							</div>
+						</div> -->
+
+						
+
+						<p>
+							Le coeur de la zone infectée, quelque part entre Gallipoli et Sannicola, n’est que sécheresse et désolation. Tina nous emmène droit vers un oasis de verdure qui résiste effrontément à la maladie. Les oliviers y vivent en pleine forme. Par quel miracle? Experte en agronomie, la jeune femme explique que depuis janvier 2014, ces arbres sont traités «avec des pratiques agricoles adaptées». Les herbes dans lesquelles pondent les cicadelles sont arrachées, les branches des oliviers ne sont jamais coupées au delà d’un certain diamètre pour préserver la vigueur des arbres, et des espèces dites symbiotiques sont plantées près des racines pour favoriser leur coopération mutuelle.
+						</p>
+
+						<p>
+							Exemple, des pieds de fèves qui «enrichissent le sol en azote et décompactent la terre autour des racines.» Tina Minerva insiste: il n’y a dans ces pratiques rien de nouveau, tout au plus s’agit-il d’usages oubliés ou négligés.
+						</p>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step1.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Dans le "cimetière", en fait un vignoble abandonné, demeurent les vestiges des premiers oliviers qui auraient contracté la maladie en 2008.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step2.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Kurt Leimegger, de B+H Solutions, est venu expérimenter une solution de nanobilles d'argent en suspension.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step3.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">En compagnie d'Alessandro, le propriétaire du terrain, Kurt repère un vieil olivier. Dévasté par la vue de ses oliviers desséchés, Alessandro confie ne plus avoir le courage de venir ici depuis des années.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step4.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Les hommes percent des trous dans le tronc. La pulpe qui en ressort est encore fraîche, alors que l'arbre semble mort depuis des années.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step5.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Kurt pratique des trous dans les plupart des faisceaux du tronc principal.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step6.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">A l'aide d'une seringue, il injecte sa solution d'argent dans les orifices, en espérant que les nanobilles déboucheront les canaux à sève obstrués.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step7.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Une fois l'injection effectuée, une pâte est appliquée pour refermer le trou et permettre à l'arbre de cicatriser.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<!-- PICTURE NORMAL -->
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/step8.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">Les hommes reviendront le lendemain pour injecter dans la terre des microorganismes bénéfiques pour l'olivier. Si tout se déroule comme prévu, l'arbre peut être rétabli en 4 à 5.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<p>
+							«Nous n’avons pas la science infuse, nous essayons simplement de soigner ces oliviers, explique Tina Minerva. Le gouvernement, lui, n’a qu’une idée en tête: éradiquer la Xylella, alors qu’on ne sait même pas si c’est elle la responsable de la maladie». C’est là un autre point de désaccord majeur avec les autorités: s’appuyant notamment sur des travaux d’agronomes de l’université de Foggia, ainsi que sur des résultats d’analyse microbiologique, elle estime que la maladie ne serait pas due à une bactérie, mais à un champignon. Une information qui pourrait changer la donne, car cela changerait complètement la stratégie à adopter.
+						</p>
+
+						<p>
+							Ayant pris connaissance de ces éléments nouveaux, l’Autorité européenne de sécurité des aliments s’est d’ailleurs engagée à publier un nouveau rapport scientifique sur la maladie d’ici fin avril.
+						</p>
+
+						<p>
+							Alors, bactérie ou champignon? C’est une bataille des mots qui a commencé entre les autorités et les opposants. Les premiers ne parlent que d’épidémie de Xylella. Les seconds désignent la maladie par son nom scientifique (ou Codiro d’après l’abréviation italienne), sans aucune allusion à sa cause supposée. C’est pour faire passer le message et défendre le patrimoine des Pouilles que l’association Spazi Popolari organise régulièrement des soirées où elle explique au public sa propre vision des faits, non sans dénoncer la stratégie officielle.
+						</p>
+
+						<div class="box-full col-md-12">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<figure class="figure-sm">
+									<img src="img/article/end.jpg" alt="" class="col-md-8">
+									<figcaption class="f-font1 f-aside f-gray-medium f-aa col-md-4">A Guagnano, à un vingtaine de kilomètres de Lecce, capitale de la province. Environ 60 personnes ont répondu présent à cette réunion d’information organisée dans le Museo del Negroamaro.</figcaption>
+								</figure>
+								<div class="spacer-xl"></div>
+							</div>
+						</div>
+
+						<p>
+							C’est le cas ici à Guagnano, à un vingtaine de kilomètres de Lecce, capitale de la province. Environ 60 personnes ont répondu présent à cette réunion d’information organisée dans le Museo del Negroamaro, en fait une cave réaménagée en musée dédié au cépage local. Le président de Spazi Popolari, l’oléiculteur bio Ivano Gioffreda, est de retour de Rome où il est allé plaidé la cause des oliviers. Bon prêcheur, il se laisse emporter par son discours et marque des pauses pour laisser place aux applaudissements de l’auditoire.
+						</p>
+
+						<p>
+							Pour lui, les chercheurs en charge d’étudier l’épidémie de sont pas indépendants et sont soumis aux autorités régionales des Pouilles. «Les scientifiques ne viennent jamais voir nos résultats sur le terrain», déplore-t-il. «Si j’organise ces réunions, c’est pour informer le public que la Xylella est une fraude contre la Communauté Européenne.» Selon l’oléiculteur, la région des Pouilles aurait en effet intérêt à exagérer l’impact de la Xylella afin d’obtenir un maximum de compensations financières de la part de Bruxelles. Une thèse difficile à vérifier, mais Ivano Gioffreda rappelle que le sud de l’Italie n’en serait pas à sa première magouille du genre.
+						</p>
+
+						<!-- NEWSLETTER -->
+						<div class="box-corridor col-md-8 col-md-offset-4">
+							<div class="row">
+								<div class="spacer-sm"></div>
+								<a href="https://www.letemps.ch/sciences/2016/08/05/malgre-injonctions-bruxelles-litalie-rechigne-arracher-oliviers-malades" target="_blank">
+									<div class="related col-sm-10 col-sm-offset-1 ">
+										<img src="img/article/champ-square.jpg" alt="">
+										<h6 class="f-font1 f-h5 f-black f-aa">
+											Malgré les injonctions de Bruxelles, l’Italie rechigne à arracher ses oliviers malades
+										</h6>
+										
+										<span class="f-font1 f-aside f-gray-medium f-aa f-nomargin">letemps.ch – 5 août 2016</span>
+										<div class="spacer-sm"></div>
+										<button type="button" class="btn btn-default f-font3 f-weight600 f-aa">Lire l'article</button>
+
+										<!-- <div class="input-group form-button-fix">
+											<input type="text" class="form-control input-lg f-font1 f-aa" placeholder="Votre email">
+											<span class="input-group-btn">
+												<button class="btn btn-default btn-lg f-font3 f-weight600 f-aa" type="button">S'inscrire</button>
+											</span>
+										</div> -->
+									</div>
+								</a>
+								<div class="spacer-lg"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="prefooter">
+			<div class="container">
+
+				<div class="row">
+					<h3 class="text-center f-font1 f-h3 f-weight100 f-aa">Nos grands formats</h3>
+					<div class="spacer-xl"></div>
+					<div class="col-md-3 col-sm-6">
+						<main>
+							<a href="https://labs.letemps.ch/interactive/2016/longread-fioul-lourd/" target="_blank" class="tilter tilter--2">
+								<figure class="tilter__figure">
+									<img class="tilter__image" src="img/article-card-fioul-lourd.jpg" alt="img03" />
+									<div class="tilter__deco tilter__deco--shine"><div></div></div>
+									<div class="tilter__deco tilter__deco--overlay"></div>
+									<figcaption class="tilter__caption">
+										<h4 class="tilter__title f-font1 f-h3 f-weight700 f-aa">Fioul&nbsp;lourd</h4>
+										<p class="tilter__description">Le sang impur de la globalisation</p>
+									</figcaption>
+									<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+										<path d="M20.5,20.5h260v375h-260V20.5z" />
+									</svg>
+								</figure>
+							</a>
+						</main>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<main>
+							<a href="https://labs.letemps.ch/interactive/2016/shenzhen/" target="_blank" class="tilter tilter--2">
+								<figure class="tilter__figure">
+									<img class="tilter__image" src="img/article-card-shenzen.jpg" alt="img03" />
+									<div class="tilter__deco tilter__deco--shine"><div></div></div>
+									<div class="tilter__deco tilter__deco--overlay"></div>
+									<figcaption class="tilter__caption">
+										<h4 class="tilter__title f-font1 f-h3 f-weight700 f-aa">Shenzhen</h4>
+										<p class="tilter__description">De la fumée des usines aux ateliers d'artistes</p>
+									</figcaption>
+									<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+										<path d="M20.5,20.5h260v375h-260V20.5z" />
+									</svg>
+								</figure>
+							</a>
+						</main>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<main>
+							<a href="http://labs.hebdo.ch/interactive/2016/longread-horlogerie-japonaise/" target="_blank" class="tilter tilter--2">
+								<figure class="tilter__figure">
+									<img class="tilter__image" src="img/article-card-horlogerie-japonaise.jpg" alt="img03" />
+									<div class="tilter__deco tilter__deco--shine"><div></div></div>
+									<div class="tilter__deco tilter__deco--overlay"></div>
+									<figcaption class="tilter__caption">
+										<h4 class="tilter__title f-font1 f-h3 f-weight700 f-aa">Horlogerie japonaise</h4>
+										<p class="tilter__description">A la conquête du monde</p>
+									</figcaption>
+									<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+										<path d="M20.5,20.5h260v375h-260V20.5z" />
+									</svg>
+								</figure>
+							</a>
+						</main>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<main>
+							<a href="https://labs.letemps.ch/interactive/2016/tchernobyl-30-ans/" target="_blank" class="tilter tilter--2">
+								<figure class="tilter__figure">
+									<img class="tilter__image" src="img/article-card-tcherno-30-ans.jpg" alt="img03" />
+									<div class="tilter__deco tilter__deco--shine"><div></div></div>
+									<div class="tilter__deco tilter__deco--overlay"></div>
+									<figcaption class="tilter__caption">
+										<h4 class="tilter__title f-font1 f-h3 f-weight700 f-aa">Voyage au cœur de la zone</h4>
+										<p class="tilter__description">Avec les exilés installés à Tchernobyl</p>
+										<!-- <p class="tilter__description">Comment Adula, le projet de parc national, agite le Tessin et les Grisons</p> -->
+									</figcaption>
+									<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+										<path d="M20.5,20.5h260v375h-260V20.5z" />
+									</svg>
+								</figure>
+							</a>
+						</main>
+					</div>
+				</div>
+
+				<!-- <div class="row">
+					<h3 class="text-center f-font1 f-h3 f-weight100 f-aa">Nos grands formats</h3>
+					<div class="spacer-xl"></div>
+					<div class="col-md-3 article-card">
+						<div>
+							<a href="" target="blank">
+								<figure>
+									<img src="img/article-card-fioul-lourd.jpg" alt="" class="img-responsive"/>
+								</figure>
+								<h5 class="f-font1 f-h5 f-flash f-weight600">Fioul lourd, le sang impur de la globalisation</h5>
+							</a>
+						</div>
+						<h6 class="f-font1 f-h6">Par <span class="f-weight700i">Sylvain Besson</span>&nbsp;&nbsp;<a href=""><i class="fa fa-envelope f-flash"></i></a></h6>
+						<p class="f-gray-dark">Polluant et peu contrôlé, le pétrole que brûlent les gros navires marchands est dans le viseur des autorités.</p>
+						<h6 class="f-font1 f-h6 f-weight700"><a href="" target="blank" class="f-flash">Voir tout les article de Sylvain</a></h6>
+					</div>
+					<div class="col-md-3">
+						<figure>
+							<img src="img/article/accueil-placeholder.jpg" alt="" class="img-responsive"/>
+						</figure>
+						<h5 class="f-font1 f-h5 f-flash f-weight600">Shenzhen, de la fumée des usines aux ateliers d'artistes</h5>
+						<h6 class="f-font1 f-h6">Par <span class="f-weight700i">Boris Mabillard</span>&nbsp;&nbsp;<i class="fa fa-envelope f-flash"></i></h6>
+						<p class="f-gray-dark">Exploration du sexe sous toutes ses formes et expressions, à travers toutes ses émotions.</p>
+					</div>
+					<div class="col-md-3">
+						<figure>
+							<img src="img/article/accueil-placeholder.jpg" alt="" class="img-responsive"/>
+						</figure>
+						<h5 class="f-font1 f-h5 f-flash f-weight600">Shenzhen, de la fumée des usines aux ateliers d'artistes</h5>
+						<h6 class="f-font1 f-h6">Par <span class="f-weight700i">Boris Mabillard</span>&nbsp;&nbsp;<i class="fa fa-envelope f-flash"></i></h6>
+						<p class="f-gray-dark">Exploration du sexe sous toutes ses formes et expressions, à travers toutes ses émotions.</p>
+					</div>
+					<div class="col-md-3">	
+						<figure>
+							<img src="img/article/accueil-placeholder.jpg" alt="" class="img-responsive"/>
+						</figure>
+						<h5 class="f-font1 f-h5 f-flash f-weight600">Shenzhen, de la fumée des usines aux ateliers d'artistes</h5>
+						<h6 class="f-font1 f-h6">Par <span class="f-weight700i">Boris Mabillard</span>&nbsp;&nbsp;<i class="fa fa-envelope f-flash"></i></h6>
+						<p class="f-gray-dark">Exploration du sexe sous toutes ses formes et expressions, à travers toutes ses émotions.</p>
+					</div>
+				</div> -->
+
+			</div>
+		</section>
+
+		<footer class="f-font1 f-h5 f-white f-weight400 f-aa">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<ul class="footer-menu">
+							<a href="https://www.letemps.ch" target="_blank"><img src="img/logo-lt-blanc.svg" alt="" class="footer-logo"></a>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+							<li><a href="https://www.letemps.ch/a-propos" target="blank">À propos</a></li>
+							<li><a href="https://www.letemps.ch/faq" target="blank">FAQ</a></li>
+							<li><a href="https://www.letemps.ch/contact" target="blank">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<ul class="footer-menu">
+							<li><a href="http://www.admeira.ch/fr/brands/digital/letemps-ch" target="blank">Publicité</a></li>
+							<li><a href="http://www.letempsarchives.ch/" target="blank">Archives</a></li>
+							<li><a href="https://www.letemps.ch/abonnes/services" target="blank">Services</a></li>
+							<li><a href="https://www.letemps.ch/rss" target="blank">RSS</a></li>
+							<li><a href="https://www.letemps.ch/" target="blank">© 2017 Le Temps SA</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<!-- <div class="input-group form-button-fix">
+							<input type="text" class="form-control input-lg f-font1 f-aa" placeholder="Votre email">
+							<span class="input-group-btn">
+								<button class="btn btn-default btn-lg f-font3 f-weight600 f-aa" type="button">S'inscrire</button>
+							</span>
+						</div>
+						<div class="spacer-md"></div>
+						<div class="list-inline input-group">
+							<ul>
+								<li>
+									<input type="checkbox" id="c1" name="quotidien" aria-label="...">
+							        <label for="c1" class="f-flash"><span></span>Quotidien</label>
+								</li>
+								<li>
+									<input type="checkbox" id="c2" name="quotidien" aria-label="...">
+							        <label for="c2" class="f-flash"><span></span>Hebdomadaire</label>
+								</li>
+								<li>
+									<input type="checkbox" id="c3" name="quotidien" aria-label="...">
+							        <label for="c3" class="f-flash"><span></span>Un jour, une idée</label>
+								</li>
+							</ul>
+							<div class="spacer-xl"></div>	
+							<div class="spacer-md"></div>	
+					    </div> -->
+
+
+						<div id="mc_embed_signup">
+						    <form action="//letemps.us5.list-manage.com/subscribe/post?u=935318f4cb8cfdc02fc8eaae2&amp;id=56c41a402e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+							      <div id="mc_embed_signup_scroll">
+							      <div id="mce-responses" class="clear">
+							        <div class="response" id="mce-error-response" style="display:none"></div>
+							        <div class="response" id="mce-success-response" style="display:none"></div>
+							      </div>
+							      <div class="input-group mc-field-group">
+							        <label class="sr-only" for="mce-EMAIL">Votre adresse email</label>
+							        <input type="email" name="EMAIL" class="form-control required email input-lg" id="mce-EMAIL" placeholder="Votre adresse email">
+							        <div style="position: absolute; left: -5000px;"><input type="text" name="b_935318f4cb8cfdc02fc8eaae2_56c41a402e" tabindex="-1" value=""></div>
+							        <span class="input-group-btn">
+							          <button class="btn btn-default btn-lg f-font3 f-weight600 f-aa" type="submit">S'inscrire</button>
+							        </span>
+							      </div>
+							      <!-- <p class="help-block small"><a href="#">Consulter nos archives</a> • <a href="#">Accéder à votre compte</a></p> -->
+							      <p></p>
+							      <ul class="list-inline">
+							          <li><input type="checkbox" value="1" name="group[17505][1]" id="mce-group[17505]-17505-0" checked="checked"><label for="mce-group[17505]-17505-0" style="margin-left:5px;"><span></span>Générale</label></li>
+							          <li><input type="checkbox" value="2" name="group[17505][2]" id="mce-group[17505]-17505-1" checked="checked"><label for="mce-group[17505]-17505-1" style="margin-left:5px;"><span></span>Économie</label></li>
+
+							          <li><input type="checkbox" value="4" name="group[17505][4]" id="mce-group[17505]-17505-4" checked="checked"><label for="mce-group[17505]-17505-4" style="margin-left:5px;"><span></span>Futur</label></li>
+
+							          <li><input type="checkbox" value="32" name="group[17505][32]" id="mce-group[17505]-17505-5" checked="checked"><label for="mce-group[17505]-17505-5" style="margin-left:5px;"><span></span>Un jour, une idée</label></li>
+							      </ul>
+							      <p></p>
+							      </div>
+						    </form>
+						</div>
+						<div class="sharebox sharebox-invert">
+							<a href="https://www.facebook.com/sharer.php?u={{ app.url }}&display=popup&ref=plugin&src=share_button"><i class="fa fa-facebook fa-2x"></i></a>
+							<a href="https://twitter.com/intent/tweet?text={{ twitterDescription ~ ' ' ~ app.url ~ ' '|url_encode }}&via={{ brand }}"><i class="fa fa-twitter fa-2x"></i></a>
+							<a href="https://www.linkedin.com/shareArticle?url={{ app.url }}&mini=true&title={{ title|url_encode }}&summary={{ description|url_encode }}&source={{ 'Le Temps'|url_encode }}"><i class="fa fa-linkedin fa-2x"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="credits col-md-12">
+						<div class="spacer-xl"></div>
+						<span class="f-h7 f-gray-medium">Réalisation: César Greppin</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		{{ block('footer_brand') }}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/header.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <!-- tilt dependencies -->
+        <script src="js/tilt.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script> 
+        <script src="js/anime.min.js"></script>
+
+        <script>
+			(function() {
+				var tiltSettings = [
+				{},
+				{
+					movement: {
+						imgWrapper : {
+							translation : {x: 0, y: 0, z: 0},
+							rotation : {x: -5, y: 5, z: 0},
+							reverseAnimation : {
+								duration : 1200,
+								easing : 'easeOutElastic',
+								elasticity : 600
+							}
+						},
+						lines : {
+							translation : {x: 10, y: 10, z: [0,10]},
+							reverseAnimation : {
+								duration : 1000,
+								easing : 'easeOutExpo',
+								elasticity : 600
+							}
+						},
+						caption : {
+							translation : {x: 20, y: 20, z: 0},
+							rotation : {x: 0, y: 0, z: 0},
+							reverseAnimation : {
+								duration : 1500,
+								easing : 'easeOutElastic',
+								elasticity : 600
+							}
+						},
+						/*
+						overlay : {
+							translation : {x: 10, y: 10, z: [0,50]},
+							reverseAnimation : {
+								duration : 500,
+								easing : 'easeOutExpo'
+							}
+						},
+						*/
+						shine : {
+							translation : {x: 50, y: 50, z: 0},
+							reverseAnimation : {
+								duration : 1200,
+								easing : 'easeOutElastic',
+								elasticity: 600
+							}
+						}
+					}
+				
+				
+				}];
+
+				function init() {
+					var idx = 0;
+					[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) { 
+						idx = pos%2 === 0 ? idx+1 : idx;
+						new TiltFx(el, tiltSettings[idx-1]);
+					});
+				}
+
+				// Preload all images.
+				imagesLoaded(document.querySelector('main'), function() {
+					document.body.classList.remove('loading');
+					init();
+				});
+
+				// REMOVE THIS!
+				// For Demo purposes only. Prevent the click event.
+				[].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
+					el.addEventListener('click', function(ev) { ev.preventDefault(); });
+				});
+
+				var pater = document.querySelector('.pater'),
+					paterSVG = pater.querySelector('.pater__svg'),
+					pathEl = paterSVG.querySelector('path'),
+					paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+
+				pater.addEventListener('mouseenter', function() {
+					anime.remove(pathEl);
+					anime({
+						targets: pathEl,
+						d: paths.active,
+						duration: 400,
+						easing: 'easeOutQuad'
+					});
+				});
+
+				pater.addEventListener('mouseleave', function() {
+					anime.remove(pathEl);
+					anime({
+						targets: pathEl,
+						d: paths.default,
+						duration: 400,
+						easing: 'easeOutExpo'
+					});
+				});
+			})();
+		</script>
+	</body>
+	
+</html>
